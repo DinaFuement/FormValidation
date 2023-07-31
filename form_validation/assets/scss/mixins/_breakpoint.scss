@@ -1,0 +1,108 @@
+$screen-xs: 363px;
+$screen-sm: 576px;
+$screen-md: 767px;
+$screen-md-x: 768px;
+$screen-lg: 992px;
+$screen-lg-x: 1024px;
+$screen-xl: 1200px;
+
+//========== min-width=========
+@mixin small {
+    @media (min-width: #{$screen-sm}) {
+        @content;
+    }
+}
+@mixin medium {
+    @media (min-width: #{$screen-md}) {
+        @content;
+    }
+}
+@mixin extra-medium{
+    @media (min-width: #{$screen-md-x}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: #{$screen-lg}) {
+        @content;
+    }
+}
+
+@mixin extra-large{
+    @media (min-width: #{$screen-xl}) {
+        @content;
+    }
+}
+
+//=========== max-width ==========
+@mixin media-max-sm {
+    @media (max-width: #{$screen-sm}) {
+        @content;
+    }
+}
+@mixin media-max-md {
+    @media (max-width: #{$screen-md}) {
+        @content;
+    }
+}
+@mixin media-max-lg {
+    @media (max-width: #{$screen-lg}) {
+        @content;
+    }
+}
+@mixin media-max-xl {
+    @media (max-width: #{$screen-xl}) {
+        @content;
+    }
+}
+
+
+// ================================ //
+
+
+@media (min-width:1024px) {
+    .file {
+        margin: 0px 100px;
+        background-color: white;
+        box-shadow: 1px 0px 1px gray;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width:1024px) {
+    .over-all {
+        border-radius: 5px;
+        margin: 0 100px;
+        background-color:white;
+        box-shadow: 0px 0px 1px gray;
+    }
+}
+
+@media (min-width:1440px) {
+    .over-all {
+        margin:  0px 102px;
+        box-shadow: 0px 0px 1px gray;
+    }
+}
+
+.col-12 {
+    text-align: center;
+    padding: 5px 0;
+}
+@media(min-width:768px) {
+    .col-12{
+        padding-top: 10px;
+    }
+}
+
+
+@media (min-width:1024px) {
+    .col-12{
+        text-align: end;
+        padding: 5px;
+    }
+    button.btn.btn-primary {
+        font-size: 20px;
+    }
+}

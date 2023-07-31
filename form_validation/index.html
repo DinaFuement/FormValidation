@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+
+    <!-- style sheet link -->
+    <link rel="stylesheet" href="./public/css/style.min.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- java script link -->
+   <script defer src="./assets/js/index.js"></script>
+   
+   <!-- toster cdn -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  </head>
+
+  <body class="body-color">
+    <div class="assignment m-3">
+      <h2 class="information fs-2">Assignment Information Form</h2>
+      <p class="fs-6">
+        This information can be collected as a form where they enter the initial
+        details then save and proceed to other info.
+      </p>
+    </div>
+    <div class="file p-2">
+      <h2>File Info</h1>
+    </div>
+    <div class="over-all">
+      <form class="row g-3 m-3 form needs-validation" id="form">
+        <h2 class="title fs-4">New Claim Information</h2>
+  
+        <div class="col-12 col-md-6 col-lg-3  col-xl-3 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >Funeral Home Name <span class="text-danger">*</span></label
+          >
+          <select class="down funeral-home-name" name="funeral-home-name" id="funeral-home-name">
+            <option value="">Select</option>
+            <option value="Basham Funeral Care">Basham Funeral Care</option>
+            <option value="Jhon Funeral Care">Jhon Funeral Care</option>
+           
+          </select>
+          <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >Deceased First Name <span class="text-danger">*</span></label
+          >
+        
+          <input maxlength="15"
+            type="text"
+            class="form-control text-secondary mt-2 first-name"
+            id="first-name"
+            placeholder="Enter First Name"
+            
+          />
+          <small class="ps-3 small text-danger"></small>
+          <span></span>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-2 col-xl-2 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >Deceased Last Name <span class="text-danger">*</span></label
+          >
+    
+          <input
+            type="text"
+            class="form-control text-secondary mt-2 last-name"
+            id="last-name"
+            value=""
+            placeholder="Enter Last Name"
+            
+          />
+          <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-2 col-xl-2 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >Initial Call Taken <span class="text-danger">*</span></label
+          >
+          
+          <input
+            type="text"
+            class="form-control text-secondary mt-2 initial-call-taken"
+            id="initial-call-taken"
+            placeholder="Client Portal"
+            
+          />
+          <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-2 col-xl-2 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5 org-date"
+            >Org Date<span class="text-danger">*</span></label
+          >
+          
+          <input
+            type="text"
+            class="form-control text-secondary mt-2 org-date"
+            id="org-date"
+            placeholder="10/06/2022,01.59:54"
+            
+          />
+          <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5 "
+            >Social Security No<span class="text-danger">*</span></label
+          >
+         
+          <input
+            type="text"
+            class="form-control text-secondary mt-2 social-sec-no"
+            id="social-security-no"
+            placeholder="Enter SSN No"
+            
+          />
+          <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 col-xl-4 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5 "
+            >Date Of Birth<span class="text-danger">*</span></label
+          >
+          
+          <input
+            type="date"
+            class="form-control text-secondary mt-2 date-of-birth"
+            id="date-of-birth"
+            placeholder="mm/dd/yyyy"
+            
+          />
+          <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 col-xl-4 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5 "
+            >Date Of Death<span class="text-danger">*</span></label
+          >
+         
+          <input
+            type="date"
+            class="form-control text-secondary mt-2 date-of-death"
+            id="date-of-death"
+            placeholder="dd/mm/yyyy"
+            
+          />
+          <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5 "
+            >Cause Of Death</label
+          >
+        
+          <select class="down cause-of-death" name="" id="Cause-of">
+            <option value="">Select</option>
+            <option value="Accident Causes">Accident Causes </option>
+            <option value="Natural Causes">Natural Causes </option>
+          </select>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 col-xl-4 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5 "
+            >Ind Group</label
+          >
+        
+          <select class="down ind-group" name="" id="">
+            <option value="">Select</option>
+            <option value="Group">Group</option>
+            <option value="Member">Member</option>
+          </select>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-3 col-xl-4 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5 "
+            >Died Where?</label
+          >
+          <select class="down died-where" name="" id="">
+            <option value="">Select</option>
+            <option value="Other">Other</option>
+            <option value="others">others</option>
+          </select>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >Place Of Death</label
+          >
+         
+          <input
+            type="text"
+            class="form-control text-secondary mt-2"
+            id="place-of-death"
+            placeholder="Enter Died Where"
+          /> <small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >Is DC from out of twon?</label
+          ><br /><br>
+          
+          <input
+            type="checkbox"
+            class=""
+            id=""
+            placeholder="Enter Died Where"
+            
+          />
+          <label class="fs-5" for="">Yes</label>
+          <input
+            type="checkbox"
+            class=""
+            id=""
+            placeholder="Enter Died Where"
+            
+          />
+          <label class="fs-5" for="">No</label>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >Ship out FH</label
+          >
+         
+          <input
+            type="text"
+            class="form-control text-secondary mt-2"
+            id="ship-out-fh"
+            placeholder="Enter Ship out FH Name"
+            
+          /><small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 text-start from-box-2">
+          <label for="validationDefault01" class="form-label common-color fs-5"
+            >FH contact/phone(or city & state</label
+          >
+          
+          <input
+            type="text"
+            class="form-control text-secondary mt-2"
+            id="fh-contact"
+            placeholder="FH contact/phone(or city & state"
+          /><small class="ps-3 small text-danger"></small>
+        </div>
+  
+        <div class="col-12">
+          <button class="btn btn-success pt-2 pb-2 ps-3 pe-3 " type="submit">
+            Save & Proceed
+          </button>
+        </div>
+      </form>
+  </div>
+  <!-- toaster link -->
+  
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  </body>
+</html>
+
+
+
+
